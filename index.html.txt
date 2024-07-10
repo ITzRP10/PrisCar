@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRISCAR - Stand de Carros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .car-listing {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .car {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        .car img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>PRISCAR - Stand de Carros</h1>
+    <p>Os melhores carros aos melhores preços</p>
+</header>
+
+<nav>
+    <a href="#home">Início</a>
+    <a href="#about">Sobre Nós</a>
+    <a href="#cars">Carros</a>
+    <a href="#contact">Contato</a>
+</nav>
+
+<div class="main-content">
+    <section id="home">
+        <h2>Bem-vindo à PRISCAR</h2>
+        <p>Encontre o carro dos seus sonhos conosco.</p>
+    </section>
+
+    <section id="about">
+        <h2>Sobre Nós</h2>
+        <p>PRISCAR é um stand de carros com mais de 20 anos de experiência no mercado, oferecendo uma vasta gama de veículos novos e usados de alta qualidade.</p>
+    </section>
+
+    <section id="cars" class="car-listing">
+        <h2>Nossos Carros</h2>
+        
+        <!-- Exemplo de um carro -->
+        <div class="car">
+            <img src="link-para-imagem-do-carro.jpg" alt="Carro 1">
+            <h3>Carro Modelo 1</h3>
+            <p>Descrição breve do carro.</p>
+            <p><strong>Preço:</strong> €20,000</p>
+        </div>
+        
+        <!-- Adicione mais carros aqui -->
+
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <p>Telefone: +351 123 456 789</p>
+        <p>Email: contato@priscar.com</p>
+        <p>Endereço: Rua Exemplo, 123, Cidade, País</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 PRISCAR - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
