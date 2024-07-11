@@ -47,12 +47,41 @@
             padding: 20px;
             width: 300px;
             text-align: center;
+            background-color: #fff;
         }
         .car img {
             width: 100%;
             height: auto;
             border-bottom: 1px solid #ddd;
             margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .car h3 {
+            margin: 10px 0;
+        }
+        .car p {
+            margin: 5px 0;
+        }
+        .buttons {
+            margin-top: 15px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .button.whatsapp {
+            background-color: #25D366;
+        }
+        .button:hover {
+            opacity: 0.8;
         }
         footer {
             background-color: #333;
@@ -62,6 +91,52 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .image-gallery img {
+            width: 48%;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @media only screen and (max-width: 700px){
+            .modal-content {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -94,14 +169,13 @@
         <h2>Nossos Carros</h2>
         
         <!-- Exemplo de um carro -->
-        <section id="cars" class="car-listing">
-    <h2>Nossos Carros</h2>
-    
-    <!-- Exemplo de um carro -->
-    <div class="car">
-        <img src="imagem%201.jpg" alt="Carro 1">
-        <h3>Mercedes Benz 109 cdi Citan 90cv</h3>
-        <p>FAÇO FINANCIAMENTO 
+        <div class="car">
+            <h3>Mercedes Benz 109 cdi Citan 90cv</h3>
+            <div class="image-gallery">
+                <img src="imagem1-1.jpg" alt="Carro 1 Imagem 1" onclick="openModal(this.src)">
+                <img src="imagem1-2.jpg" alt="Carro 1 Imagem 2" onclick="openModal(this.src)">
+            </div>
+            <p>FAÇO FINANCIAMENTO 
 Ano-2014
 Mês-12
 Cilindrada-1500
@@ -110,18 +184,21 @@ Combustível-Diesel
 Klm-239.000
 Aceito retoma 
 PRISCAR AUTOMÓVEIS</p>
-        <p><strong>Preço:</strong> €7,990</p>
-    </div>
-    
-    <!-- Adicione mais carros aqui -->
-</section>
-
+            <p><strong>Preço:</strong> €7,990</p>
+            <div class="buttons">
+                <a href="tel:+351936707997" class="button">Ligar</a>
+                <a href="https://wa.me/351936707997" class="button whatsapp">WhatsApp</a>
+            </div>
+        </div>
+        
+        <!-- Adicione mais carros aqui -->
+    </section>
 
     <section id="contact">
         <h2>Contato</h2>
         <p>Telefone: +351 936 707 997</p>
         <p>Email: standpriscar@gmail.com</p>
-        <p>Endereço: Avenida da Corredoura, 436, Sobrosa 4580-727, Paredes/p>
+        <p>Endereço: Avenida da Corredoura, 436, Sobrosa 4580-727, Paredes</p>
     </section>
 </div>
 
@@ -129,5 +206,25 @@ PRISCAR AUTOMÓVEIS</p>
     <p>&copy; 2024 PRISCAR - Todos os direitos reservados</p>
 </footer>
 
+<!-- Modal for image enlargement -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+</div>
+
+<script>
+    function openModal(src) {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        modal.style.display = "block";
+        modalImg.src = src;
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+</script>
+
 </body>
-</html>
+</html> 
