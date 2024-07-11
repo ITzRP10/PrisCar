@@ -1,1 +1,3 @@
-www.priscar.me
+git add CNAME
+git commit -m "Adicionar domínio personalizado"
+git push origin main
