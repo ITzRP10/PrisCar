@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros à Venda - PRISCAR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Fundo branco */
+            color: #000000; /* Texto preto */
+        }
+        header {
+            background-color: #003366; /* Azul escuro */
+            color: #ffffff; /* Texto branco */
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #004080; /* Azul escuro */
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #ffffff; /* Texto branco */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #dddddd; /* Cinza claro */
+            color: #000000; /* Texto preto */
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .car-listing {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .car {
+            border: 1px solid #dddddd; /* Cinza claro */
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            background-color: #ffffff; /* Fundo branco */
+        }
+        .car img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #dddddd; /* Cinza claro */
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .car h3 {
+            margin: 10px 0;
+        }
+        .car p {
+            margin: 5px 0;
+        }
+        .buttons {
+            margin-top: 15px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            color: #ffffff; /* Texto branco */
+            background-color: #003366; /* Azul escuro */
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .button.whatsapp {
+            background-color: #25D366; /* Verde do WhatsApp */
+        }
+        .button:hover {
+            opacity: 0.8;
+        }
+        footer {
+            background-color: #003366; /* Azul escuro */
+            color: #ffffff; /* Texto branco */
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Carros à Venda - PRISCAR</h1>
+    <p>Veja todos os carros disponíveis</p>
+</header>
+
+<nav>
+    <a href="index.html">Início</a>
+    <a href="#about">Sobre Nós</a>
+    <a href="carros.html">Carros</a>
+    <a href="#contact">Contato</a>
+</nav>
+
+<div class="main-content">
+    <section class="car-listing">
+        <div class="car">
+            <img src="carro1.jpg" alt="Carro 1">
+            <h3>Carro 1</h3>
+            <p>Descrição do Carro 1</p>
+            <div class="buttons">
+                <a href="#" class="button">Ver Detalhes</a>
+                <a href="https://wa.me/351936707997" class="button whatsapp">WhatsApp</a>
+            </div>
+        </div>
+        <div class="car">
+            <img src="carro2.jpg" alt="Carro 2">
+            <h3>Carro 2</h3>
+            <p>Descrição do Carro 2</p>
+            <div class="buttons">
+                <a href="#" class="button">Ver Detalhes</a>
+                <a href="https://wa.me/351936707997" class="button whatsapp">WhatsApp</a>
+            </div>
+        </div>
+        <!-- Adicione mais carros aqui -->
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 PRISCAR - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
