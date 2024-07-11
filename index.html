@@ -9,33 +9,47 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff; /* Fundo branco */
-            color: #000000; /* Texto preto */
+            background-color: #f4f4f4;
         }
         header {
-            background-color: #003366; /* Azul escuro */
-            color: #ffffff; /* Texto branco */
-            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
             text-align: center;
         }
         nav {
-            background-color: #004080; /* Azul escuro */
+            background-color: #444;
             overflow: hidden;
         }
         nav a {
             float: left;
             display: block;
-            color: #ffffff; /* Texto branco */
+            color: white;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
         }
         nav a:hover {
-            background-color: #dddddd; /* Cinza claro */
-            color: #000000; /* Texto preto */
+            background-color: #ddd;
+            color: black;
         }
         .main-content {
             padding: 20px;
+        }
+        .hero {
+            background-image: url('banner.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 50px;
         }
         .car-listing {
             display: flex;
@@ -43,18 +57,18 @@
             justify-content: space-around;
         }
         .car {
-            border: 1px solid #dddddd; /* Cinza claro */
+            border: 1px solid #ddd;
             border-radius: 5px;
             margin: 10px;
             padding: 20px;
             width: 300px;
             text-align: center;
-            background-color: #ffffff; /* Fundo branco */
+            background-color: #fff;
         }
         .car img {
             width: 100%;
             height: auto;
-            border-bottom: 1px solid #dddddd; /* Cinza claro */
+            border-bottom: 1px solid #ddd;
             margin-bottom: 15px;
             cursor: pointer;
         }
@@ -71,8 +85,8 @@
             display: inline-block;
             padding: 10px 20px;
             margin: 5px;
-            color: #ffffff; /* Texto branco */
-            background-color: #003366; /* Azul escuro */
+            color: white;
+            background-color: #007bff;
             border: none;
             border-radius: 5px;
             text-decoration: none;
@@ -80,14 +94,14 @@
             cursor: pointer;
         }
         .button.whatsapp {
-            background-color: #25D366; /* Verde do WhatsApp */
+            background-color: #25D366;
         }
         .button:hover {
             opacity: 0.8;
         }
         footer {
-            background-color: #003366; /* Azul escuro */
-            color: #ffffff; /* Texto branco */
+            background-color: #333;
+            color: white;
             text-align: center;
             padding: 10px;
             position: fixed;
@@ -112,7 +126,8 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.9); /* Fundo preto translúcido */
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
         }
         .modal-content {
             margin: auto;
@@ -124,13 +139,13 @@
             position: absolute;
             top: 15px;
             right: 35px;
-            color: #f1f1f1; /* Branco */
+            color: #f1f1f1;
             font-size: 40px;
             font-weight: bold;
         }
         .close:hover,
         .close:focus {
-            color: #bbbbbb; /* Cinza claro */
+            color: #bbb;
             text-decoration: none;
             cursor: pointer;
         }
@@ -145,7 +160,6 @@
 
 <header>
     <h1>PRISCAR</h1>
-    <p>Os melhores carros aos melhores preços</p>
 </header>
 
 <nav>
@@ -156,9 +170,8 @@
 </nav>
 
 <div class="main-content">
-    <section id="home">
-        <h2>Bem-vindo ao stand PRISCAR</h2>
-        <p>Encontre o carro dos seus sonhos connosco.</p>
+    <section id="home" class="hero">
+        <h1>Bem-vindo ao PRISCAR</h1>
     </section>
 
     <section id="about">
@@ -168,7 +181,31 @@
 
     <section id="cars" class="car-listing">
         <h2>Nossos Carros</h2>
-        <a href="carros.html" class="button">Ver todos os carros</a>
+        
+        <!-- Exemplo de um carro -->
+        <div class="car">
+            <h3>Mercedes Benz 109 cdi Citan 90cv</h3>
+            <div class="image-gallery">
+                <img src="imagem1-1.jpg" alt="Carro 1 Imagem 1" onclick="openModal(this.src)">
+                <img src="imagem1-2.jpg" alt="Carro 1 Imagem 2" onclick="openModal(this.src)">
+            </div>
+            <p>FAÇO FINANCIAMENTO 
+Ano-2014
+Mês-12
+Cilindrada-1500
+Cavalos-90
+Combustível-Diesel 
+Klm-239.000
+Aceito retoma 
+PRISCAR AUTOMÓVEIS</p>
+            <p><strong>Preço:</strong> €7,990</p>
+            <div class="buttons">
+                <a href="tel:+351936707997" class="button">Ligar</a>
+                <a href="https://wa.me/351936707997" class="button whatsapp">WhatsApp</a>
+            </div>
+        </div>
+        
+        <!-- Adicione mais carros aqui -->
     </section>
 
     <section id="contact">
