@@ -4,211 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRISCAR</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .main-content {
-            padding: 20px;
-        }
-        .hero {
-            background-image: url('banner.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .hero h1 {
-            font-size: 50px;
-        }
-        .car-listing {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .car {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin: 10px;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            background-color: #fff;
-        }
-        .car img {
-            width: 100%;
-            height: auto;
-            border-bottom: 1px solid #ddd;
-            margin-bottom: 15px;
-            cursor: pointer;
-        }
-        .car h3 {
-            margin: 10px 0;
-        }
-        .car p {
-            margin: 5px 0;
-        }
-        .buttons {
-            margin-top: 15px;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 5px;
-            color: white;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 14px;
-            cursor: pointer;
-        }
-        .button.whatsapp {
-            background-color: #25D366;
-        }
-        .button:hover {
-            opacity: 0.8;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .image-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .image-gallery img {
-            width: 48%;
-            cursor: pointer;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.9);
-        }
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-        }
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        @media only screen and (max-width: 700px){
-            .modal-content {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<header>
+<header class="bg-dark text-white text-center py-3">
     <h1>PRISCAR</h1>
+    <p>Os melhores carros aos melhores preços</p>
 </header>
 
-<nav>
-    <a href="#home">Início</a>
-    <a href="#about">Sobre Nós</a>
-    <a href="#cars">Carros</a>
-    <a href="#contact">Contato</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">PRISCAR</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#home">Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">Sobre Nós</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#cars">Carros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contato</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
-<div class="main-content">
-    <section id="home" class="hero">
-        <h1>Bem-vindo ao PRISCAR</h1>
+<div class="container my-5">
+    <section id="home">
+        <h2 class="text-center">Bem-vindo ao stand PRISCAR</h2>
+        <p class="text-center">Encontre o carro dos seus sonhos connosco.</p>
     </section>
 
-    <section id="about">
+    <section id="about" class="my-5">
         <h2>Sobre Nós</h2>
         <p>PRISCAR é um stand de carros com mais de 10 anos de experiência no mercado, oferecendo uma vasta gama de veículos usados de alta qualidade.</p>
     </section>
 
-    <section id="cars" class="car-listing">
+    <section id="cars" class="my-5">
         <h2>Nossos Carros</h2>
-        
-        <!-- Exemplo de um carro -->
-        <div class="car">
-            <h3>Mercedes Benz 109 cdi Citan 90cv</h3>
-            <div class="image-gallery">
-                <img src="imagem1-1.jpg" alt="Carro 1 Imagem 1" onclick="openModal(this.src)">
-                <img src="imagem1-2.jpg" alt="Carro 1 Imagem 2" onclick="openModal(this.src)">
+        <div class="row">
+            <!-- Exemplo de um carro -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="images/exemplo.jpg" class="card-img-top" alt="Carro 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Mercedes Benz 109 cdi Citan 90cv</h5>
+                        <p class="card-text">
+                            FAÇO FINANCIAMENTO <br>
+                            Ano-2014 <br>
+                            Mês-12 <br>
+                            Cilindrada-1500 <br>
+                            Cavalos-90 <br>
+                            Combustível-Diesel <br>
+                            Klm-239.000 <br>
+                            Aceito retoma <br>
+                            PRISCAR AUTOMÓVEIS
+                        </p>
+                        <p><strong>Preço:</strong> €7,990</p>
+                        <div class="btn-group" role="group">
+                            <a href="tel:+351936707997" class="btn btn-primary">Ligar</a>
+                            <a href="https://wa.me/351936707997" class="btn btn-success">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>FAÇO FINANCIAMENTO 
-Ano-2014
-Mês-12
-Cilindrada-1500
-Cavalos-90
-Combustível-Diesel 
-Klm-239.000
-Aceito retoma 
-PRISCAR AUTOMÓVEIS</p>
-            <p><strong>Preço:</strong> €7,990</p>
-            <div class="buttons">
-                <a href="tel:+351936707997" class="button">Ligar</a>
-                <a href="https://wa.me/351936707997" class="button whatsapp">WhatsApp</a>
-            </div>
+            <!-- Adicione mais carros aqui -->
         </div>
-        
-        <!-- Adicione mais carros aqui -->
     </section>
 
-    <section id="contact">
+    <section id="contact" class="my-5">
         <h2>Contato</h2>
         <p>Telefone: +351 936 707 997</p>
         <p>Email: standpriscar@gmail.com</p>
@@ -216,29 +88,12 @@ PRISCAR AUTOMÓVEIS</p>
     </section>
 </div>
 
-<footer>
+<footer class="bg-dark text-white text-center py-3">
     <p>&copy; 2024 PRISCAR - Todos os direitos reservados</p>
 </footer>
 
-<!-- Modal for image enlargement -->
-<div id="myModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="img01">
-</div>
-
-<script>
-    function openModal(src) {
-        var modal = document.getElementById("myModal");
-        var modalImg = document.getElementById("img01");
-        modal.style.display = "block";
-        modalImg.src = src;
-    }
-
-    function closeModal() {
-        var modal = document.getElementById("myModal");
-        modal.style.display = "none";
-    }
-</script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
